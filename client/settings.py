@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-django_heroku.settings(locals())
+django_heroku.settings(locals(), databases=False)
 
 ROOT_URLCONF = 'client.urls'
 
