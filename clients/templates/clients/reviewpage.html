@@ -1,0 +1,80 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reviewpage.css' %}">
+</head>
+
+<body>
+    <div id="page1">
+        <div id="header">
+            <a href="{% url 'main' %}"><img id="logo" alt="My.Cl 로고" src="{% static 'img/로고.jpg' %}" /></a>
+            <div id="reviewheader">후기작성</div>
+            <div id="auth" style="text-align: end;">
+                {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}"><input type="button" id="authbutton" value="로그아웃"></a>
+                <a href="{% url 'storage' user_id=user.id %}"><input type="button" id="authbutton"
+                        value="{{ user.username }}님 마이페이지"></a>
+                {% else %}
+                <a href="{% url 'login' %}"><input type="button" id="authbutton" value="로그인"></a>
+                <a href="{% url 'signup' %}"><input type="button" id="authbutton" value="회원가입"></a>
+                {% endif %}
+                <hr size="5px" color="pink">
+            </div>
+        </div>
+
+
+        <div id="select_lecture">
+            <div style="margin-bottom: 5px; font-size: 25px; font-weight: bolder;">수강한 강의를 입력하세요.</div>
+
+            <form action="{% url 'review' %}" method='POST'> {% csrf_token %}
+                <select name="site" id="id_site">
+                    <option value="ebsi"> EBSi</option>
+                    <option value="mega"> 메가스터디</option>
+                    <option value="etoos"> 이투스</option>
+                </select>
+                <input type="text" name="search_key" value="{{ search_key }}" id="lecture_text">
+                <span class="input-group-btn">
+                    <input class="btn btn-default" type="submit" value="Search">
+                </span>
+                <hr size="3px" color="pink" width="400px">
+
+            </form>
+
+        </div>
+
+        {% if post_lec%}
+        <table style="margin-left: auto; margin-right: auto; margin-top: 20px">
+
+            <thead style="font-weight: bold; font-size: x-large; font-family: '어그로'; border: 10px;">
+                <th>강의명</th>
+                <th>선생님</th>
+                <th>과목</th>
+                <th>학년</th>
+            </thead>
+
+            {% for post in post_lec %}
+            <tr id="list_search">
+                <td>{{post.title}}</td>
+                <td>{{post.teacher}}</td>
+                <td>{{post.subject}}</td>
+                <td>{{post.grade}}</td>
+                <td>
+                    <form action="{% url 'for_review' %}" method='get'> {% csrf_token %}
+                        <a href="{% url 'for_review' %}"><button name = "lecture_select" value="{{ post.title }}" id="submitbutton">후기
+                                작성하기</button></a>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {%endif%}
+
+
+
+
+
+    </div>
+</body>

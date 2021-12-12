@@ -1,0 +1,186 @@
+@font-face {
+    font-family: '어그로';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gmarket';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    margin: 0px;
+    padding: 10px;
+}
+#page1{
+    width: 80%;
+    margin: auto;
+}
+
+#logo{
+    width: auto;
+    height: 150px;
+    text-align: center;
+}
+
+#header{
+    text-align: start;
+    margin-left: 20px;
+}
+#recheader{
+    font-family: '어그로';
+    font-weight: bolder;
+    font-size: 25px;
+    color:#000;
+    margin-left:2%;
+}
+
+
+#authbutton{
+    color:#3ecac7;
+    background-color: white;
+    border : 0px;
+    margin-right: 10px;
+    font-family: '어그로';
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#authbutton:hover{
+    text-shadow: 1px 1px 1px #000;
+}
+
+table, td{
+    text-align: center;
+}
+
+#tag_box{
+    width: 400px;
+    height: 150px;
+    padding: 20px;
+    margin: 10 10 10 10;
+    border-radius: 40px;
+    align-items: center;
+    border:12px solid #fdb0b0 ;
+}
+
+
+#box_model{
+    width: 400px;
+    height: 80px;
+    padding: 20px;
+    margin: 10 10 10 10;
+    background-color: #fdb0b0;
+    border-radius: 20px;
+    align-items: center;
+    vertical-align: middle;
+}
+#tag_info{
+    font-family: 'gmarket';
+    font-size:20px;
+}
+
+
+
+#lec_title{
+    font-family: 'gmarket';
+    font-size: 20px;
+}
+
+#lec_info{
+    font-family: 'gmarket';
+    font-size:15px;
+}
+
+
+
+#first{
+    border:5px solid #3ecac7;
+    align-items: center;
+    background-color: #3ecac7;
+    font-family: '어그로';
+    font-weight: bold;
+    font-size: 15px;
+    color:white;
+    text-shadow: -2px -2px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000;
+    text-align: center;
+    padding : 5px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+#first:hover{
+    background-color: white;
+    border: 5px solid #3ecac7;
+    vertical-align: middle;
+}
+
+
+
+
+
+#prev{
+    display: inline-block;
+    border:5px solid #fdb0b0;
+    background-color: #fdb0b0;
+    font-family: '어그로';
+    font-weight: bold;
+    font-size: 15px;
+    color:white;
+    text-shadow: -2px -2px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000;
+    padding : 5px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-110%);
+    margin-top: 20px;
+}
+
+#prev:hover{
+    background-color: white;
+    border: 5px solid #fdb0b0;
+    vertical-align: middle;
+}
+
+#next{
+    display: inline-block;
+    border:5px solid #fdb0b0;
+    background-color: #fdb0b0;
+    font-family: '어그로';
+    font-weight: bold;
+    font-size: 15px;
+    color:white;
+    text-shadow: -2px -2px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000;
+    padding : 5px;
+    left: 50%;
+    position: absolute;
+    margin-top: 20px;
+
+}
+
+#next:hover{
+    background-color: white;
+    border: 5px solid #fdb0b0;
+    vertical-align: middle;
+}
+
+
+a:link {
+    color : #000;
+    text-decoration: none;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+a:visited {
+   color : #3ecac7;
+   text-decoration: underline;
+   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+a:hover {
+    color : #3ecac7;
+    text-decoration: underline;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
